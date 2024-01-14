@@ -1,9 +1,7 @@
 # nord-dotfiles
-
-## Preview
 ![image](https://github.com/a2p1k02/nord-dotfiles/assets/35633190/85e00883-85c2-4a7b-aab6-836af722844b)
 
-## Steps to get rice
+# Steps to get rice
 
 ```bash
 sudo pacman -Syu ueberzug ranger alacritty i3 firefox ttf-jetbrains-mono ttf-dejavu i3status-rust rofi fish xorg-xinit xorg-server xorg-xinput arc-gtk-theme arc-solid-gtk-theme arc-icon-theme capitaine-cursors nitrogen feh
