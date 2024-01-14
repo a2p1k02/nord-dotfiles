@@ -31,17 +31,17 @@ block = "amd_gpu"
 
 [[block]]
 block = "temperature"
-format = " $icon $max max "
-format_alt = " $icon $min min, $max max, $average avg "
-interval = 10
-chip = "*-pci-*"
-
-[[block]]
-block = "temperature"
-format = " $icon $max max "
+format = " CPU $icon $max max "
 format_alt = " $icon $min min, $max max, $average avg "
 interval = 10
 chip = "*-isa-*"
+
+[[block]]
+block = "temperature"
+format = " GPU $icon $max max "
+format_alt = " $icon $min min, $max max, $average avg "
+interval = 10
+chip = "*-pci-*"
 
 [[block]]
 block = "load"
