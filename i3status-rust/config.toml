@@ -1,0 +1,65 @@
+[theme]
+theme = "nord-dark"
+[theme.overrides]
+separator = " "
+
+[icons]
+icons = "none"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = " $icon root: $available.eng(w:2) "
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "memory"
+interval = 1
+format = " $icon $mem_total_used_percents.eng(w:2) "
+format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
+
+[[block]]
+interval = 1
+block = "amd_gpu"
+
+[[block]]
+block = "temperature"
+format = " $icon $max max "
+format_alt = " $icon $min min, $max max, $average avg "
+interval = 10
+chip = "*-pci-*"
+
+[[block]]
+block = "temperature"
+format = " $icon $max max "
+format_alt = " $icon $min min, $max max, $average avg "
+interval = 10
+chip = "*-isa-*"
+
+[[block]]
+block = "load"
+format = " $icon 1min avg: $1m.eng(w:4) "
+interval = 1
+
+[[block]]
+block = "custom"
+command = " uname -r "
+
+[[block]]
+block = "time"
+interval = 1
+format = " $timestamp.datetime(f:'%a %d.%m.%Y %H:%M:%S') "
+
+[[block]]
+block = "sound"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
